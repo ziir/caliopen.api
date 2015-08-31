@@ -14,16 +14,14 @@ pyramid.default_locale_name = en
 pyramid.includes =
     pyramid_kvs
     cornice
+    caliopen.api.base
 
+kvs.cache = {"kvs": "redis",
+             "ttl": 3600,
+             "key_prefix": "tokens::"}
 
-kvs.session = {"kvs": "redis",
-               "key_name": "session_id",
-               "session_type": "cookie",
-                "ttl": 300,
-                "key_prefix": "session::"}
 
 # Caliopen related configuration
-
 caliopen.config =
     global:%(here)s/../base/caliopen.yaml.template
 
