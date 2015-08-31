@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+__version__ = '0.0.1'
+
 
 try:
     import pkg_resources
@@ -9,18 +11,17 @@ except ImportError:
 
 
 import logging
-
 from pyramid.config import Configurator
-
 from caliopen.base.config import Configuration
-
-__version__ = '0.0.1'
 
 log = logging.getLogger(__name__)
 
 
 def main(global_config, **settings):
-    """ This function returns a Pyramid WSGI application.
+    """Caliopen entry point for WSGI application.
+
+    Load Caliopen configuration and setup a WSGI application
+    with loaded API services.
     """
     # XXX ugly way to init caliopen configuration before pyramid
     caliopen_config = settings['caliopen.config'].split(':')[1]
