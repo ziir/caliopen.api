@@ -37,6 +37,7 @@ Running API
 -----------
 
 ::
+
     pserve development.ini.sample --reload
 
 
@@ -54,4 +55,5 @@ Tests
 Tests are launched using `nose <https://nose.readthedocs.org/en/latest/>`_.
 
 ::
+
     nosetests -sxv caliopen/api/tests/*.py
