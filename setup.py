@@ -13,6 +13,7 @@ requires = [
     'pyramid_jinja2',
     'caliopen.api.user',
     'pyramid_kvs',
+    'waitress',
     ]
 
 tests_require = ['nose', 'coverage']
@@ -22,7 +23,6 @@ if sys.version_info < (3, 3):
 
 extras_require = {
     'dev': [
-        'waitress',
         'pyramid_debugtoolbar',
     ],
     'doc': [
